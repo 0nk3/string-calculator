@@ -6,7 +6,7 @@ public class Stringcalculator {
 
     public int Add(String num1) {
 
-        if (num1.equals("")) {
+        if (num1.equals(" ")) {
             return 0;
         } else {
             return Integer.parseInt(num1);

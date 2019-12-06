@@ -10,5 +10,12 @@ class StringcalculatorTest {
     void  emptyStringTest(){
         assertEquals(0, stringcalculator.Add());
     }
-
+    @Test
+    void  oneStringTest(){
+        assertEquals(1, stringcalculator.Add("1"));
+    }
+    @Test
+    void twoStringTest(){
+        assertEquals(3, stringcalculator.Add("1", "2"));
+    }
 }
