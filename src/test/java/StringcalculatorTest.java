@@ -8,7 +8,7 @@ class StringcalculatorTest {
 
     @Test
     void  emptyStringTest(){
-        assertEquals(0, stringcalculator.Add());
+        assertEquals(0, stringcalculator.Add(""));
     }
     @Test
     void  oneStringTest(){
@@ -16,6 +16,13 @@ class StringcalculatorTest {
     }
     @Test
     void twoStringTest(){
-        assertEquals(3, stringcalculator.Add("1", "2"));
+        assertEquals(2, stringcalculator.Add("1", "1"));
+    }
+    @Test
+    void multipleStringTest1(){
+        assertEquals(10, stringcalculator.Add("1,2,3,4"));
+    }@Test
+    void multipleStringTest2(){
+        assertEquals(10, stringcalculator.Add("1,2,3,4"));
     }
 }
