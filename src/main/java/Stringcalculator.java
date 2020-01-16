@@ -1,20 +1,32 @@
-import java.sql.Array;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Stringcalculator {
 
 
-    public int Add(String num1) {
-        int sum = 0;
-        String[] numbersList = num1.split(",");
+    public int Add(String stringOfNums){
 
-        if (num1.length() ==0) {
-            return 0;
-        } else {
-            for (String number: numbersList) {
-                sum += Integer.parseInt(number);
+        int sum = 0;
+
+        List<String> matchList = new ArrayList<>();
+
+        try {
+            Pattern regex = Pattern.compile("\\d+");
+            Matcher regexMatcher = regex.matcher(stringOfNums);
+            while (regexMatcher.find()) {
+                matchList.add(regexMatcher.group());
             }
-            return sum;
+
+        }catch (Exception ignored){
+
+        }finally {
+            for (String num: matchList) {
+                sum+=Integer.parseInt(num);
+            }
         }
+        return sum;
     }
 
     public int Add(){
