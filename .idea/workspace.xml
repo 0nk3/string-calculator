@@ -87,33 +87,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.StringcalculatorTest.stringCalcAddFailTest">
+  <component name="RunManager" selected="Gradle.StringcalculatorTest.testCaseForStringCalculator">
     <configuration name="StringcalculatorTest.multipleStringTest2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.multipleStringTest2&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="StringcalculatorTest.multipleStringTestWithDelimiters" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.multipleStringTestWithDelimiters&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -168,6 +148,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="StringcalculatorTest.testCaseForStringCalculator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.testCaseForStringCalculator&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="StringcalculatorTest.testNoArgument" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -190,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.StringcalculatorTest.testCaseForStringCalculator" />
         <item itemvalue="Gradle.StringcalculatorTest.stringCalcAddFailTest" />
         <item itemvalue="Gradle.StringcalculatorTest.testNoArgument" />
         <item itemvalue="Gradle.StringcalculatorTest.multipleStringTest2" />
         <item itemvalue="Gradle.StringcalculatorTest.multipleStringTestWithDelimiters2" />
-        <item itemvalue="Gradle.StringcalculatorTest.multipleStringTestWithDelimiters" />
       </list>
     </recent_temporary>
   </component>

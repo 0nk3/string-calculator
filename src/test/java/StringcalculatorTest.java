@@ -29,10 +29,13 @@ class StringcalculatorTest {
         assertEquals(3, Stringcalculator.Add("//;\n1;2"));
 
         assertEquals(3, Stringcalculator.Add("//4\n142"));
+        //TODO : test fails
+        assertEquals(3,Stringcalculator.Add("//;\n1000,1;2"));
     }
     /* ***************************************************************************************** */
     @Test
     void stringCalcAddFailTest() throws Exception {
-        Stringcalculator.Add("1,3,-4");
+        //TODO only returns one value, only the first
+        Stringcalculator.Add("-1 -2,3,4");
     }
 }

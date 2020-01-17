@@ -38,7 +38,7 @@ public class Stringcalculator {
                 int numberSignCheck = Integer.parseInt(result.trim());
                 if (numberSignCheck < 0) {   // check if number is negative and add to the list of negatives
                     negativeNumbers.add(numberSignCheck);
-                    throw new Exception("Negative Numbers Not Allowed..." + negativeNumbers.toString());
+                    throw new Exception("ERROR : Invalid input " + negativeNumbers.toString());
                 } else if (numberSignCheck <= BIG_NUMBERS ) {
                     sum += numberSignCheck;
                 }
