@@ -64,7 +64,7 @@
   <component name="PropertiesComponent">
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simple-calculator" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -87,7 +87,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.StringcalculatorTest.multipleStringTestWithDelimiters2">
+  <component name="RunManager" selected="Gradle.StringcalculatorTest">
     <configuration name="StringcalculatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -190,8 +190,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.StringcalculatorTest.multipleStringTestWithDelimiters2" />
         <item itemvalue="Gradle.StringcalculatorTest" />
+        <item itemvalue="Gradle.StringcalculatorTest.multipleStringTestWithDelimiters2" />
         <item itemvalue="Gradle.StringcalculatorTest.multipleStringTestWithDelimiters" />
         <item itemvalue="Gradle.StringcalculatorTest.multipleStringTest1" />
         <item itemvalue="Gradle.StringcalculatorTest.twoStringTest" />

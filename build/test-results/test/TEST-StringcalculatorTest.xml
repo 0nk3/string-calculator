@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringcalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-17T08:33:52" hostname="kali" time="0.008">
+<testsuite name="StringcalculatorTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-01-17T10:40:06" hostname="kali" time="0.024">
   <properties/>
-  <testcase name="multipleStringTestWithDelimiters2()" classname="StringcalculatorTest" time="0.008"/>
+  <testcase name="oneStringTest()" classname="StringcalculatorTest" time="0.009"/>
+  <testcase name="multipleStringTestWithDelimiters()" classname="StringcalculatorTest" time="0.001"/>
+  <testcase name="testNoArgument()" classname="StringcalculatorTest" time="0.0"/>
+  <testcase name="emptyStringTest()" classname="StringcalculatorTest" time="0.001"/>
+  <testcase name="multipleStringTest1()" classname="StringcalculatorTest" time="0.0"/>
+  <testcase name="multipleStringTest2()" classname="StringcalculatorTest" time="0.0"/>
+  <testcase name="multipleStringTestWithDelimiters2()" classname="StringcalculatorTest" time="0.001"/>
+  <testcase name="twoStringTest()" classname="StringcalculatorTest" time="0.001"/>
+  <testcase name="testNewlines()" classname="StringcalculatorTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
