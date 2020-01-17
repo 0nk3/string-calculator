@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringcalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-16T11:14:29" hostname="kali" time="0.022">
+<testsuite name="StringcalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-17T08:33:52" hostname="kali" time="0.008">
   <properties/>
-  <testcase name="multipleStringTestWithDelimiters()" classname="StringcalculatorTest" time="0.022"/>
+  <testcase name="multipleStringTestWithDelimiters2()" classname="StringcalculatorTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -4,14 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StringcalculatorTest {
 
-    Stringcalculator stringcalculator = new Stringcalculator();
+    private Stringcalculator stringcalculator = new Stringcalculator();
 
     //no argument passed
     @Test
     void testNoArgument(){
         assertEquals(0,stringcalculator.Add());
     }
-    /* ****************************************************************************** */
+    /* ***************************************************************************************** */
     //double quotation passed as argument
     @Test
     void  emptyStringTest(){
@@ -25,7 +25,7 @@ class StringcalculatorTest {
 
     @Test
     void twoStringTest(){
-        assertEquals(2, stringcalculator.Add("1", "1"));
+        assertEquals(2, stringcalculator.Add("1,1"));
     }
     @Test
     void multipleStringTest1(){
@@ -36,17 +36,21 @@ class StringcalculatorTest {
         assertEquals(10, stringcalculator.Add("1,2,3,4"));
 
     }
-    /* ****************************************************************************** */
+    /* ******************************************************************************************* */
     // handling newlines test
     @Test
     void testNewlines(){
         assertEquals(6,stringcalculator.Add("1\n2,3"));
     }
-    /* ****************************************************************************** */
-    // handing different delimiters(stuck)
-    //TODO
+    /* ******************************************************************************************* */
+    // Handling different delimiters
     @Test
     void multipleStringTestWithDelimiters(){
-        assertNotEquals(3, stringcalculator.Add("//4\n142"));
+        assertEquals(3, stringcalculator.Add("//;\n1;2"));
+    }
+    //TODO : Needs to be fixed (stuck)
+    @Test
+    void multipleStringTestWithDelimiters2(){
+        assertEquals(146, stringcalculator.Add("//4\n142"));
     }
 }
