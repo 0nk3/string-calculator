@@ -87,33 +87,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.StringcalculatorTest">
-    <configuration name="StringcalculatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.StringcalculatorTest.stringCalcAddFailTest">
+    <configuration name="StringcalculatorTest.multipleStringTest2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="StringcalculatorTest.multipleStringTest1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.multipleStringTest1&quot;" />
+        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.multipleStringTest2&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -168,12 +148,32 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StringcalculatorTest.twoStringTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="StringcalculatorTest.stringCalcAddFailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.twoStringTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.stringCalcAddFailTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="StringcalculatorTest.testNoArgument" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.testNoArgument&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -190,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.StringcalculatorTest" />
+        <item itemvalue="Gradle.StringcalculatorTest.stringCalcAddFailTest" />
+        <item itemvalue="Gradle.StringcalculatorTest.testNoArgument" />
+        <item itemvalue="Gradle.StringcalculatorTest.multipleStringTest2" />
         <item itemvalue="Gradle.StringcalculatorTest.multipleStringTestWithDelimiters2" />
         <item itemvalue="Gradle.StringcalculatorTest.multipleStringTestWithDelimiters" />
-        <item itemvalue="Gradle.StringcalculatorTest.multipleStringTest1" />
-        <item itemvalue="Gradle.StringcalculatorTest.twoStringTest" />
       </list>
     </recent_temporary>
   </component>

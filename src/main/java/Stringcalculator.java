@@ -1,47 +1,50 @@
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Stringcalculator {
 
-    public int Add(String stringOfNums) throws Exception {
-        int sum = 0;
-        //
-        if(stringOfNums.isEmpty()){
-            return 0;
-        }
-        else if(stringOfNums.length()==2){
-            String[] numbers = stringOfNums.split(",");
-            return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
-        }else{
-            //data extracted using regex will be stored on this array list
-            ArrayList<String> matchList = new ArrayList<>();
-
-            try {
-//            Pattern patternDel = Pattern.compile("^(\\/\\/\\d+)");
-//            Matcher DelMatcher = patternDel.matcher(stringOfNums);
-//            stringOfNums = stringOfNums.replaceAll(String.valueOf(DelMatcher),"\\");
-
-
-                final Pattern pattern = Pattern.compile("\\d+");
-                final Matcher regexMatcher = pattern.matcher(stringOfNums);
-
-                while (regexMatcher.find()) {
-                    matchList.add(regexMatcher.group());
-                }
-
-            }catch (Exception e){
-                throw new Exception("Doesn't accept negative numbers");
-            }finally {
-                for (String num: matchList) {
-                    sum += Integer.parseInt(num);
-                }
-            }
-            return sum;
-        }
-    }
+    private static final int BIG_NUMBERS = 1000;
+    //method to call if no argument has been provided
     public int Add(){
         return 0;
+    }
+    //method to be accessed by the tester
+    public static int Add(String stringNumbers) throws Exception {
+
+        String delimiter = ",\n";
+
+        if (stringNumbers.startsWith("//")) {
+            delimiter = stringNumbers.substring(stringNumbers.indexOf("//") + 2, stringNumbers.indexOf("\n"));
+
+            String[] arrayOfNumbers = delimiter.split("[,]");
+
+            for (String s : arrayOfNumbers) {
+                delimiter = delimiter + s;
+            }
+            stringNumbers = stringNumbers.substring(stringNumbers.indexOf("\n"), stringNumbers.length());
+        }
+        delimiter = "[" + delimiter + "]";
+
+        return Add(stringNumbers, delimiter);
+    }
+
+    //method only accessible withing this class, its just for splitting and removing delimiters
+    private static int Add(final String numbers, String delimiter) throws Exception {
+        int sum = 0;
+        String[] arrayOfNumbers = numbers.split("[" + delimiter + "]");  // to store the actual numbers split by the delimiter found and its a list of characters put inside the square brackets
+        ArrayList<Integer> negativeNumbers = new ArrayList<>();             // and array to store all the negative numbers if found
+
+        for (String result : arrayOfNumbers) {
+            if (!result.trim().isEmpty()) {
+                int numberSignCheck = Integer.parseInt(result.trim());
+                if (numberSignCheck < 0) {   // check if number is negative and add to the list of negatives
+                    negativeNumbers.add(numberSignCheck);
+                    throw new Exception("Negative Numbers Not Allowed..." + negativeNumbers.toString());
+                } else if (numberSignCheck <= BIG_NUMBERS ) {
+                    sum += numberSignCheck;
+                }
+            }
+        }
+        return sum;
     }
 
 }
