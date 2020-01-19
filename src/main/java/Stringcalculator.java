@@ -1,8 +1,21 @@
 import java.util.ArrayList;
-
+/* ************************************************************************************************* *
+ * @author : Ndumiso Onke Fanti                                                                      *
+ * Description : String Calculator takes input of numbers as a string with in various forms with     *
+ * different delimiters and find the sum of those numbers extracted under given conditions           *
+ *  1.Create an add function that can handle up to two integers passed in as a string                *
+ *  2.Modify the add function to handle multiple integers                                            *
+ *  3.Modify the add function so that it can handle new lines between integers                       *
+ *  4.Modify the add function so that it can handle different delimiters                             *
+ *  5.Modify the ass function so that it can hande negative integers.                                *
+ *  6.Modify the add function so that it ignores integers greater than or equal to 1000              *
+ *  7.Modify the add function so that it can support delimiters of any length                        *
+ *  8. Modify the add function so that it is able to support different delimiters of any length      *
+ *  9.                                                                                               *
+ * ************************************************************************************************* */
 public class Stringcalculator {
 
-    private static final int BIG_NUMBERS = 1000;
+    private static final int BIGNUMBERS = 1_000;
     //method to call if no argument has been provided
     public int Add(){
         return 0;
@@ -28,18 +41,19 @@ public class Stringcalculator {
     //method only accessible withing this class, its just for splitting and accessing custom delimiters
     private static int Add(final String numbers, String delimiter) throws Exception {
         int sum = 0;
-        String[] arrayOfNumbers = numbers.split("[" + delimiter + "]");  // to store the actual numbers split by the delimiter found and its a list of characters put inside the square brackets
+        // to store the actual numbers split by the delimiter found and its a list of characters put inside the square brackets
+        String[] arrayOfNumbers = numbers.split("[" + delimiter + "]");
 
-        ArrayList<Integer> negativeNumbers = new ArrayList<>();             // an array to store all the negative numbers if found
+        // an array to store all the negative numbers if found
+        ArrayList<Integer> negativeNumbers = new ArrayList<>();
 
         for (String result : arrayOfNumbers) {
             if (!result.trim().isEmpty()) {
                 int numberSignCheck = Integer.parseInt(result.trim());
-
-                if (numberSignCheck < 0) {   // check if number is negative and add to the list of negatives
+                // check if number is negative and add to the array list of of negative numbers
+                if (numberSignCheck < 0) {
                     negativeNumbers.add(numberSignCheck);
-                    //throw new Exception("ERROR : Invalid input " + negativeNumbers);
-                } else if (numberSignCheck <= BIG_NUMBERS ) {
+                } else if (numberSignCheck <= BIGNUMBERS ) {
                     sum += numberSignCheck;
                 }
             }
