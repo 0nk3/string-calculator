@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringcalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-19T16:37:34" hostname="kali" time="0.007">
+<testsuite name="StringcalculatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-01-21T18:31:18" hostname="kali" time="0.016">
   <properties/>
-  <testcase name="testCaseForStringCalculator()" classname="StringcalculatorTest" time="0.007"/>
+  <testcase name="invalidInput1()" classname="StringcalculatorTest" time="0.008"/>
+  <testcase name="invalidInput2()" classname="StringcalculatorTest" time="0.001"/>
+  <testcase name="negativeNumbersTest()" classname="StringcalculatorTest" time="0.001"/>
+  <testcase name="testCaseForStringCalculator()" classname="StringcalculatorTest" time="0.002"/>
+  <testcase name="invalidInput()" classname="StringcalculatorTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -10,67 +10,72 @@ import java.util.ArrayList;
  *  5.Modify the ass function so that it can hande negative integers.                                *
  *  6.Modify the add function so that it ignores integers greater than or equal to 1000              *
  *  7.Modify the add function so that it can support delimiters of any length                        *
- *  8. Modify the add function so that it is able to support different delimiters of any length      *
- *  9.                                                                                               *
+ *  8.Modify the add function so that it is able to support different delimiters of any length       *
+ *  9.Modify the add function so that it can handle invalid input                                    *
  * ************************************************************************************************* */
 public class Stringcalculator {
-
+    // Constant to use when ignoring numbers greater than 1000
     private static final int BIGNUMBERS = 1_000;
+
     //method to call if no argument has been provided
     public int Add(){
         return 0;
     }
+
     //method to be accessed by the tester
     static int Add(String stringNumbers) throws Exception {
-        StringBuilder delimiter = new StringBuilder(",\n");
+        StringBuilder DELIMETER = new StringBuilder(",\n");
 
         if (stringNumbers.startsWith("//")) {
-            delimiter = new StringBuilder(stringNumbers.substring(stringNumbers.indexOf("//") + 2, stringNumbers.indexOf("\n")));
-            String[] arrayOfNumbers = delimiter.toString().split("[,]");
+            DELIMETER = new StringBuilder(stringNumbers.substring(stringNumbers.indexOf("//") + 2, stringNumbers.indexOf("\n")));
+            String[] arrayOfNumbers = DELIMETER.toString().split("[,]");
 
             for (String s : arrayOfNumbers) {
-                delimiter.append(s);
+                DELIMETER.append(s);
             }
             stringNumbers = stringNumbers.substring(stringNumbers.indexOf("\n"));
         }
-        delimiter = new StringBuilder("[" + delimiter + "]");
+        DELIMETER = new StringBuilder("[" + DELIMETER + "]");
 
-        return Add(stringNumbers, delimiter.toString());
+        return Add(stringNumbers, DELIMETER.toString());
     }
 
     //method only accessible withing this class, its just for splitting and accessing custom delimiters
-    private static int Add(final String numbers, String delimiter) throws Exception {
+    public static int Add(final String numbers, String delimiter) throws Exception {
         int sum = 0;
+
         // to store the actual numbers split by the delimiter found and its a list of characters put inside the square brackets
         String[] arrayOfNumbers = numbers.split("[" + delimiter + "]");
 
         // an array to store all the negative numbers if found
         ArrayList<Integer> negativeNumbers = new ArrayList<>();
+        try {
 
-        for (String result : arrayOfNumbers) {
-            if (!result.trim().isEmpty()) {
-                int numberSignCheck = Integer.parseInt(result.trim());
-                // check if number is negative and add to the array list of of negative numbers
-                if (numberSignCheck < 0) {
-                    negativeNumbers.add(numberSignCheck);
-                } else if (numberSignCheck <= BIGNUMBERS ) {
-                    sum += numberSignCheck;
+            for (String result : arrayOfNumbers) {
+                if (!result.trim().isEmpty()) {
+                    int numberSignCheck = Integer.parseInt(result.trim());
+                    // check if number is negative and add to the array list of of negative numbers
+                    if (numberSignCheck < 0) {
+                        negativeNumbers.add(numberSignCheck);
+                    } else if (numberSignCheck < BIGNUMBERS) {
+                        sum += numberSignCheck;
+                    }
                 }
             }
+        }catch (NumberFormatException e){
+            throw new Exception("Error : Invalid Input");
         }
-        // checking if ther are negative numbers found in the input to throw the number format exception if they are found
+        // checking if there are negative numbers found in the input to throw the number format exception if they are found
         // Also print out the actual negative numbers found in the specified format
         if(negativeNumbers.size()>1){
-
             StringBuilder negatives = new StringBuilder();
+
             for (int i = 0 ; i < negativeNumbers.size()-1;i++) {
                 negatives.append(negativeNumbers.get(i)).append(", ");
-
             }
             negatives.append(negativeNumbers.get(negativeNumbers.size() - 1));
-            throw new NumberFormatException("Error : Negatives not Allowed " + negatives);
+            throw new NumberFormatException( "Error : Negatives not allowed " + negatives);
         }
         return sum;
     }
-
 }

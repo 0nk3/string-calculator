@@ -48,9 +48,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,7 +64,7 @@
   <component name="PropertiesComponent">
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simple-calculator" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../animalscopy" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
@@ -87,13 +87,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.StringcalculatorTest.testCaseForStringCalculator">
-    <configuration name="StringcalculatorTest.multipleStringTest2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.StringcalculatorTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="untitled.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringcalculatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.multipleStringTest2&quot;" />
+        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -108,12 +115,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StringcalculatorTest.multipleStringTestWithDelimiters2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="StringcalculatorTest.invalidInput" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.multipleStringTestWithDelimiters2&quot;" />
+        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.invalidInput&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -128,12 +135,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StringcalculatorTest.stringCalcAddFailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="StringcalculatorTest.invalidInput3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.stringCalcAddFailTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.invalidInput3&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -148,32 +155,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="StringcalculatorTest.testCaseForStringCalculator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="StringcalculatorTest.negativeNumbersTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.testCaseForStringCalculator&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="StringcalculatorTest.testNoArgument" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.testNoArgument&quot;" />
+        <option name="scriptParameters" value="--tests &quot;StringcalculatorTest.negativeNumbersTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -190,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.StringcalculatorTest.testCaseForStringCalculator" />
-        <item itemvalue="Gradle.StringcalculatorTest.stringCalcAddFailTest" />
-        <item itemvalue="Gradle.StringcalculatorTest.testNoArgument" />
-        <item itemvalue="Gradle.StringcalculatorTest.multipleStringTest2" />
-        <item itemvalue="Gradle.StringcalculatorTest.multipleStringTestWithDelimiters2" />
+        <item itemvalue="Gradle.StringcalculatorTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.StringcalculatorTest.invalidInput" />
+        <item itemvalue="Gradle.StringcalculatorTest.negativeNumbersTest" />
+        <item itemvalue="Gradle.StringcalculatorTest.invalidInput3" />
       </list>
     </recent_temporary>
   </component>

@@ -31,9 +31,8 @@ class StringcalculatorTest {
         assertEquals(3, Stringcalculator.Add("//;\n1;2"));
         assertEquals(3, Stringcalculator.Add("//4\n142"));
 
-        //TODO : Must be looked at very closely
     //6. Modify the add function so that it ignores integers greater than or equal to 1000.
-
+        assertEquals(3, Stringcalculator.Add("//;\n1000;1;2"));
 
     //7. Modify the add function so that it can support delimiters of any length
         assertEquals(6, Stringcalculator.Add("//***\n1***2***3"));
@@ -48,8 +47,33 @@ class StringcalculatorTest {
 
     //5. Modify the add function so that it can handle negative integers
     @Test
-    void stringCalcAddFailTest() throws Exception {
-        //TODO only returns one value, only the first
-        Stringcalculator.Add("-1,-2,3,4");
+    void negativeNumbersTest() {
+        Exception exception = assertThrows(Exception.class, () -> {
+            Stringcalculator.Add("-1,-2,3,4");
+        });
+        String actualMessage = exception.getMessage();
+        assertTrue(actualMessage.contains("Error : Negatives not allowed "));
+    }
+
+    //9. Modify the add function so that it can handle invalid input (throw an exception)
+    @Test
+    void invalidInput() throws Exception {
+        Stringcalculator.Add("//;\n1000;1;2;");
+    }
+    @Test
+    void invalidInput1() {
+        Exception exception = assertThrows(Exception.class, () -> {
+            Stringcalculator.Add("   //;\n1000,1;2");
+        });
+        String actualMessage = exception.getMessage();
+        assertTrue(actualMessage.contains("Invalid Input"));
+    }
+    @Test
+    void invalidInput2() {
+        Exception exception = assertThrows(Exception.class, () -> {
+            Stringcalculator.Add("1,2,3//;\n1000,1;2");
+        });
+        String actualMessage = exception.getMessage();
+        assertTrue(actualMessage.contains("Invalid Input"));
     }
 }
