@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *  2.Modify the add function to handle multiple integers                                            *
  *  3.Modify the add function so that it can handle new lines between integers                       *
  *  4.Modify the add function so that it can handle different delimiters                             *
- *  5.Modify the ass function so that it can hande negative integers.                                *
+ *  5.Modify the ass function so that it can handle negative integers.                                *
  *  6.Modify the add function so that it ignores integers greater than or equal to 1000              *
  *  7.Modify the add function so that it can support delimiters of any length                        *
  *  8.Modify the add function so that it is able to support different delimiters of any length       *
@@ -16,11 +16,6 @@ import java.util.ArrayList;
 public class Stringcalculator {
     // Constant to use when ignoring numbers greater than 1000
     private static final int BIGNUMBERS = 1_000;
-
-    //method to call if no argument has been provided
-    public int Add(){
-        return 0;
-    }
 
     //method to be accessed by the tester
     static int Add(String stringNumbers) throws Exception {
@@ -63,7 +58,8 @@ public class Stringcalculator {
                 }
             }
         }catch (NumberFormatException e){
-            throw new Exception("Error : Invalid Input");
+            System.err.println("Invalid Input");
+            throw new Exception("");
         }
         // checking if there are negative numbers found in the input to throw the number format exception if they are found
         // Also print out the actual negative numbers found in the specified format
@@ -74,7 +70,8 @@ public class Stringcalculator {
                 negatives.append(negativeNumbers.get(i)).append(", ");
             }
             negatives.append(negativeNumbers.get(negativeNumbers.size() - 1));
-            throw new NumberFormatException( "Error : Negatives not allowed " + negatives);
+            System.err.println( "Error : Negatives not allowed " + negatives);
+            throw new Exception("");
         }
         return sum;
     }

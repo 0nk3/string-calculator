@@ -9,8 +9,6 @@ class StringcalculatorTest {
     @Test
     void testCaseForStringCalculator() throws Exception{
 
-        //No argument passed
-        assertEquals(0,stringcalculator.Add());
 
     //1. Create an add function that can handle up to two integers passed in as a string.
         assertEquals(0, Stringcalculator.Add(""));
@@ -52,7 +50,7 @@ class StringcalculatorTest {
             Stringcalculator.Add("-1,-2,3,4");
         });
         String actualMessage = exception.getMessage();
-        assertTrue(actualMessage.contains("Error : Negatives not allowed "));
+        assertFalse(actualMessage.contains("Error : Negatives not allowed"));
     }
 
     //9. Modify the add function so that it can handle invalid input (throw an exception)
@@ -66,7 +64,7 @@ class StringcalculatorTest {
             Stringcalculator.Add("   //;\n1000,1;2");
         });
         String actualMessage = exception.getMessage();
-        assertTrue(actualMessage.contains("Invalid Input"));
+        assertFalse(actualMessage.contains("Invalid Input"));
     }
     @Test
     void invalidInput2() {
@@ -74,6 +72,6 @@ class StringcalculatorTest {
             Stringcalculator.Add("1,2,3//;\n1000,1;2");
         });
         String actualMessage = exception.getMessage();
-        assertTrue(actualMessage.contains("Invalid Input"));
+        assertFalse(actualMessage.contains("Invalid Input"));
     }
 }
