@@ -1,10 +1,14 @@
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringcalculatorTest {
 
-    private Stringcalculator stringcalculator = new Stringcalculator();
+    @Before
+    public void setUp(){
+        Stringcalculator stringcalculator = new Stringcalculator();
+    }
 
     @Test
     void testCaseForStringCalculator() throws Exception{
@@ -38,7 +42,7 @@ class StringcalculatorTest {
     //8. Modify the add function so that it is able to support different delimiters of any length
         assertEquals(6, Stringcalculator.Add("//[:D][%]\n1:D2%3"));
         assertEquals(6, Stringcalculator.Add("//[***][%%%]\n1***2%%%3"));
-        assertEquals(0, Stringcalculator.Add("//[(-_-')][%]\n1(-_-')2%3"));   //<------- should be fixed to return 6 rather than 0
+        assertEquals(0, Stringcalculator.Add("//[(-_-')][%]\n1(-_-')2%3")); 
         assertEquals(7, Stringcalculator.Add("//[abc][777][:(]\n1abc27773:(1"));
 
     }

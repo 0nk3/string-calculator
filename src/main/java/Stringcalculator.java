@@ -18,7 +18,7 @@ public class Stringcalculator {
     private static final int BIGNUMBERS = 1_000;
 
     //method to be accessed by the tester
-    static int Add(String stringNumbers) throws Exception {
+    public static int Add(String stringNumbers) throws Exception {
         StringBuilder DELIMETER = new StringBuilder(",\n");
 
         if (stringNumbers.startsWith("//")) {
