@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringcalculatorTest {
 
     @Before
-    public void setUp(){
-        Stringcalculator stringcalculator = new Stringcalculator();
+    void setUp(){
+        //Stringcalculator stringcalculator = new Stringcalculator();
     }
 
     @Test

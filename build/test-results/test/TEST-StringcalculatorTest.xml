@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringcalculatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-18T08:44:43" hostname="kali" time="0.021">
+<testsuite name="StringcalculatorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-02-18T08:51:46" hostname="kali" time="0.026">
   <properties/>
-  <testcase name="invalidInput1()" classname="StringcalculatorTest" time="0.012"/>
+  <testcase name="invalidInput1()" classname="StringcalculatorTest" time="0.014"/>
   <testcase name="invalidInput2()" classname="StringcalculatorTest" time="0.001"/>
-  <testcase name="negativeNumbersTest()" classname="StringcalculatorTest" time="0.001"/>
+  <testcase name="negativeNumbersTest()" classname="StringcalculatorTest" time="0.002"/>
   <testcase name="testCaseForStringCalculator()" classname="StringcalculatorTest" time="0.003"/>
   <testcase name="invalidInput()" classname="StringcalculatorTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>

@@ -36,7 +36,7 @@ public class Stringcalculator {
     }
 
     //method only accessible withing this class, its just for splitting and accessing custom delimiters
-    public static int Add(final String numbers, String delimiter) throws Exception {
+    private static int Add(final String numbers, String delimiter) throws Exception {
         int sum = 0;
 
         // to store the actual numbers split by the delimiter found and its a list of characters put inside the square brackets
