@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *  2.Modify the add function to handle multiple integers                                            *
  *  3.Modify the add function so that it can handle new lines between integers                       *
  *  4.Modify the add function so that it can handle different delimiters                             *
- *  5.Modify the ass function so that it can handle negative integers.                                *
+ *  5.Modify the ass function so that it can handle negative integers.                               *
  *  6.Modify the add function so that it ignores integers greater than or equal to 1000              *
  *  7.Modify the add function so that it can support delimiters of any length                        *
  *  8.Modify the add function so that it is able to support different delimiters of any length       *
@@ -17,10 +17,9 @@ public class Stringcalculator {
     // Constant to use when ignoring numbers greater than 1000
     private static final int BIGNUMBERS = 1_000;
 
-    //method to be accessed by the tester
+    //method to be accessed by the tester class
     public static int Add(String stringNumbers) throws Exception {
         StringBuilder DELIMETER = new StringBuilder(",\n");
-
         if (stringNumbers.startsWith("//")) {
             DELIMETER = new StringBuilder(stringNumbers.substring(stringNumbers.indexOf("//") + 2, stringNumbers.indexOf("\n")));
             String[] arrayOfNumbers = DELIMETER.toString().split("[,]");
@@ -35,7 +34,10 @@ public class Stringcalculator {
         return Add(stringNumbers, DELIMETER.toString());
     }
 
-    //method only accessible withing this class, its just for splitting and accessing custom delimiters
+    /* *********************************************************************** *
+     * method only accessible within this class, it basically does two things  *
+     * splitting and accessing custom delimiters                               *
+     * *********************************************************************** */
     private static int Add(final String numbers, String delimiter) throws Exception {
         int sum = 0;
 
@@ -45,11 +47,10 @@ public class Stringcalculator {
         // an array to store all the negative numbers if found
         ArrayList<Integer> negativeNumbers = new ArrayList<>();
         try {
-
             for (String result : arrayOfNumbers) {
                 if (!result.trim().isEmpty()) {
                     int numberSignCheck = Integer.parseInt(result.trim());
-                    // check if number is negative and add to the array list of of negative numbers
+                    // find negative numbers and add them to the array list
                     if (numberSignCheck < 0) {
                         negativeNumbers.add(numberSignCheck);
                     } else if (numberSignCheck < BIGNUMBERS) {
@@ -59,19 +60,18 @@ public class Stringcalculator {
             }
         }catch (NumberFormatException e){
             System.err.println("Invalid Input");
-            throw new Exception("");
+            throw new NumberFormatException();
         }
-        // checking if there are negative numbers found in the input to throw the number format exception if they are found
-        // Also print out the actual negative numbers found in the specified format
-        if(negativeNumbers.size()>1){
+        if(negativeNumbers.size() > 1){ // Are there any element in the array list of -ve numbers ?
             StringBuilder negatives = new StringBuilder();
 
             for (int i = 0 ; i < negativeNumbers.size()-1;i++) {
                 negatives.append(negativeNumbers.get(i)).append(", ");
             }
+            // print out the -ve numbers in the specified format
             negatives.append(negativeNumbers.get(negativeNumbers.size() - 1));
             System.err.println( "Error : Negatives not allowed " + negatives);
-            throw new Exception("");
+            throw new IllegalArgumentException();
         }
         return sum;
     }

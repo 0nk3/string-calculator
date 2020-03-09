@@ -1,14 +1,7 @@
-import org.junit.Before;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringcalculatorTest {
-
-    @Before
-    void setUp(){
-        //Stringcalculator stringcalculator = new Stringcalculator();
-    }
 
     @Test
     void testCaseForStringCalculator() throws Exception{
@@ -43,21 +36,17 @@ class StringcalculatorTest {
         assertEquals(6, Stringcalculator.Add("//[:D][%]\n1:D2%3"));
         assertEquals(6, Stringcalculator.Add("//[***][%%%]\n1***2%%%3"));
         assertEquals(6, Stringcalculator.Add("//[(*_*')][%]\n1(*_*')2%3"));
-
         assertEquals(7, Stringcalculator.Add("//[abc][777][:(]\n1abc27773:(1"));
         assertEquals(10, Stringcalculator.Add("//[***][#][%]\n1***2#3%4"));
         assertEquals(6, Stringcalculator.Add("//[(:::')][%]\n1(:::')2%3"));
-
     }
 
     //5. Modify the add function so that it can handle negative integers
     @Test
     void negativeNumbersTest() {
-        Exception exception = assertThrows(Exception.class, () -> {
+        assertThrows(IllegalArgumentException.class, () -> {
             Stringcalculator.Add("-1,-2,3,4");
         });
-        String actualMessage = exception.getMessage();
-        assertFalse(actualMessage.contains("Error : Negatives not allowed"));
     }
 
     //9. Modify the add function so that it can handle invalid input (throw an exception)
@@ -67,18 +56,14 @@ class StringcalculatorTest {
     }
     @Test
     void invalidInput1() {
-        Exception exception = assertThrows(Exception.class, () -> {
+        assertThrows(NumberFormatException.class, () -> {
             Stringcalculator.Add("   //;\n1000,1;2");
         });
-        String actualMessage = exception.getMessage();
-        assertFalse(actualMessage.contains("Invalid Input"));
     }
     @Test
     void invalidInput2() {
-        Exception exception = assertThrows(Exception.class, () -> {
+        assertThrows(Exception.class, () -> {
             Stringcalculator.Add("1,2,3//;\n1000,1;2");
         });
-        String actualMessage = exception.getMessage();
-        assertFalse(actualMessage.contains("Invalid Input"));
     }
 }
