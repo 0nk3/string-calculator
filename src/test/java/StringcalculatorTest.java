@@ -2,10 +2,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringcalculatorTest {
-
     @Test
     void testCaseForStringCalculator() throws Exception{
-
 
     //1. Create an add function that can handle up to two integers passed in as a string.
         assertEquals(0, Stringcalculator.Add(""));

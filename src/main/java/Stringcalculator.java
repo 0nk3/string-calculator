@@ -33,14 +33,12 @@ public class Stringcalculator {
 
         return Add(stringNumbers, DELIMETER.toString());
     }
-
     /* *********************************************************************** *
      * method only accessible within this class, it basically does two things  *
      * splitting and accessing custom delimiters                               *
      * *********************************************************************** */
     private static int Add(final String numbers, String delimiter) throws Exception {
         int sum = 0;
-
         // to store the actual numbers split by the delimiter found and its a list of characters put inside the square brackets
         String[] arrayOfNumbers = numbers.split("[" + delimiter + "]");
 
